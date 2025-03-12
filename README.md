@@ -2,4 +2,6 @@ This is a beginner-friendly book management application designed to help newcome
 
 If you're new to coding, this project will help you understand how to build and interact with a basic application using React, Express, and a simple backend.
 
+This is exacty what i was needed when i started coding on MERN
+
 Feel free to explore, experiment, and learn — I hope this helps you on your coding journey!
