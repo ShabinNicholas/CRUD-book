@@ -8,7 +8,7 @@ const Create = () => {
     bookPrice: "",
     bookRating: "",
   });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
   };
@@ -20,14 +20,13 @@ const Create = () => {
         formDetails
       );
       console.log(response);
-      alert("Book created successfully")
+      alert("Book created successfully");
       setFormDetails({
         bookName: "",
         bookPrice: "",
         bookRating: "",
-      })
+      });
       // navigate("/view")
-
     } catch (error) {
       console.error(error);
     }
