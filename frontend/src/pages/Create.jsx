@@ -8,26 +8,28 @@ const Create = () => {
     bookPrice: "",
     bookRating: "",
   });
-  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      //send the data in the server
       const response = await axios.post(
         "http://localhost:3000/create",
         formDetails
       );
+      //console log the response received form the server
       console.log(response);
       alert("Book created successfully");
+      // clear the input field
       setFormDetails({
         bookName: "",
         bookPrice: "",
         bookRating: "",
       });
-      // navigate("/view")
     } catch (error) {
+      //catch any error from the above operation
       console.error(error);
     }
     console.log(formDetails);
