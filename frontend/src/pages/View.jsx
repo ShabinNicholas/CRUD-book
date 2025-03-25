@@ -16,7 +16,6 @@ const View = () => {
       console.log(error);
     }
   }, []);
-  const viewSingleBook = (bookId) => {};
   return (
     <div>
       <h1>Book list</h1>
