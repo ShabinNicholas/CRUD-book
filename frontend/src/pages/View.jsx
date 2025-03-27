@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 const View = () => {
   const [userDetails, setUserDetails] = useState([]);
   useEffect(() => {
-    try {
-      const fetchData = async () => {
+    const fetchData = async () => {
+      try {
         const response = await axios.get("http://localhost:3000/view");
         console.log(response);
         setUserDetails(response.data.data);
-      };
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
   }, []);
   return (
     <div>

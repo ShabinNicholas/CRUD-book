@@ -8,18 +8,18 @@ const SingleView = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    try {
-      const fetchData = async () => {
+    const fetchData = async () => {
+      try {
         const response = await axios.get(
           `http://localhost:3000/view-single/${id}`
         );
         console.log(response);
         setBookDetails(response.data.data);
-      };
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
   }, []);
   const deleteBook = async (selectedID) => {
     try {
