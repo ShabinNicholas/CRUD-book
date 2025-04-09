@@ -11,6 +11,7 @@ const Create = () => {
   const handleChange = (e) => {
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -36,7 +37,7 @@ const Create = () => {
   };
   return (
     <div>
-      <h2>Create user</h2>
+      <h2>Create Book</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
