@@ -15,7 +15,8 @@ const Landing = () => {
       </p>
       <p>
         If you can create this same application without looking at the code and
-        any assistance you are ready to be a MERN stack developer
+        any assistance you are ready to be a MERN stack developer, Not fully
+        ready i mean the basic
       </p>
       <h3>ALMOST ready to be :)</h3>
       <Link to={"/create"}>
