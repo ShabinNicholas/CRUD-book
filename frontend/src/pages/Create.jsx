@@ -13,7 +13,7 @@ const Create = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //To prevent the default reload of the page
     try {
       //send the data in the server
       const response = await axios.post(
@@ -38,13 +38,14 @@ const Create = () => {
   return (
     <div>
       <h2>Create Book</h2>
+      {/* will be called when button is clicked because button type is set as submit*/}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="bookName"
           placeholder="Book Name"
           value={formDetails.bookName}
-          onChange={handleChange}
+          onChange={handleChange} // calls the handleChange whenever a change happens in the input field
         />
         <input
           type="number"
@@ -68,6 +69,7 @@ const Create = () => {
       </Link>
 
       <Link to={"/view"}>
+        {/* will call the submit function that is stored as value in the onSubmit attribute of the form*/}
         <button>View all books</button>
       </Link>
     </div>
