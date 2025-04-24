@@ -9,7 +9,10 @@ const Create = () => {
     bookRating: "",
   });
   const handleChange = (e) => {
-    setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
+    setFormDetails((formDetails) => ({
+      ...formDetails,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e) => {
